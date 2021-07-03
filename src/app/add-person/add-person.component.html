@@ -1,0 +1,33 @@
+<button id="reveal">CREATE COVID-19 REPORT</button>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" id="Personform">
+    <mat-label>Name:<br>
+        <input type="text" name="name" placeholder="NAME" formControlName="name"><br>
+    </mat-label>
+    <br><br>
+    <mat-label>Phone Number:
+        <br><input type="text" name="phone" placeholder="PHONE NUMBER" formControlName="phone"><br>
+    </mat-label>
+    <br>
+    <br>
+    <p>Choose Location</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose location</mat-label>
+        <mat-select (selectionChange)="setPlace($event)">
+            <mat-option *ngFor="let place of option" [value]="place">{{place.location}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <p>Choose Date</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName = "date" placeholder = "DATE">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+      <br><br>
+      <label>Time:</label><br>
+      <input type = "time" name = "time" formControlName = "time">
+    <br><br>
+    <button class="btn btn-success"> Submit</button>
+</form>

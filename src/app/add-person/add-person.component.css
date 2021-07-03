@@ -1,0 +1,17 @@
+
+
+button {
+    width: 60%;
+    background-color: #1646e0;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border-radius: thin;
+    cursor: pointer;
+  }
+#Personform {
+    visibility: hidden;
+    margin: 15px 0;
+}
+

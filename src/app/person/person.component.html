@@ -1,0 +1,10 @@
+
+<td>{{person_input.name}}</td>
+<td>{{person_input.date | date: 'medium'}}</td>
+<td>{{person_input.place.location}}</td>
+<td>{{person_input.phone}}</td>
+
+<td><button class="btn btn-danger" 
+    (click)="onDelete($event)">
+    Delete
+</button></td>
